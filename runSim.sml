@@ -1,0 +1,13 @@
+val a = A3 (DWith, AGP, Wmax);
+val DCAS = A10 (L, V, Da, Ada, Sd, Kd);
+val ACAS = A11 (L, V, Aa, Aaa, Sa, Ka);
+val Da = A12 (Da, Ada, Sd);
+val Aa = A13 (Aa, Aaa, Sa);
+val AGL = A1 (AGL, a, DCAS);
+val Aat = A7(AGL, AGP, L, V, Da, Ada, Sd, Kd);
+val DGL = A2 (DGL, a, p , AGL, ACAS);
+val AGP = A6 (AGP, ATL, Aat);
+val Dleth = A5 (DGL, a, p, AGL, ACAS);
+val DWith = A4 (DWith, Wmax, ADT, Dleth);
+val totalDisplacement = totalDisplacement + DWith;
+val day = day +1;
